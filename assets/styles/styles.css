@@ -1,0 +1,204 @@
+@font-face {
+    font-family: "Oswald";
+    src: url("assets/fonts/Oswald/static/Oswald-Regular.ttf") format(truetype);
+    font-weight: 400;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: "Oswald";
+    src: url("assets/fonts/Oswald/static/Oswald-Medium.ttf") format(truetype);
+    font-weight: 500;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: "Oswald";
+    src: url("assets/fonts/Oswald/static/Oswald-Bold.ttf") format(truetype);
+    font-weight: 700;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: "Oswald";
+    src: url("assets/fonts/Oswald/static/Oswald-SemiBold.ttf") format(truetype);
+    font-weight: 600;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: "Oswald";
+    src: url("assets/fonts/Oswald/static/Oswald-Light.ttf") format(truetype);
+    font-weight: 300;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: "Oswald";
+    src: url("assets/fonts/Oswald/static/Oswald-ExtraLight.ttf") format(truetype);
+    font-weight: 200;
+    font-style: normal;
+
+}
+
+:root {
+
+    --image-filter: none;
+  
+    /* font - .5rem = 8px | 1rem = 16px */
+    --body-font: "Oswald", sans-serif;
+    --h1-font-size: 1.65rem;
+    --h2-font-size: 1.45rem;
+    --h3-font-size: 1.25rem;
+  
+    --normal-font-size: 1.15rem;
+    --small-font-size: 1rem;
+  
+    --font-medium: 400;
+    --font-semi-bold: 600;
+    --font-light: 300;
+  
+    /* margenes */
+    --m-0-5: .5rem;
+    --m-0-75: .75rem;
+    --m-1: 1rem;
+    --m-1-5: 1.5rem;
+    --m-2: 2rem;
+    --m-2-5: 2.5rem;
+    --m-3: 3rem;
+  
+    --card-padding: 1.9rem 0.95rem;
+    --border-radius: 1.25rem;
+    --box-shadow: 0px 5px 20px 0px rgba(69, 67, 96, 0.1);
+  
+    --nb-slides: 5;
+    --dot-size: 15px;
+  }
+
+  /* base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    scroll-behavior: smooth;
+  }
+  
+  input:-webkit-autofill,
+  input:-webkit-autofill:focus {
+    transition: background-color 0s 600000s, color 0s 600000s !important;
+  }
+  
+  body,
+  button,
+  input,
+  textarea {
+    font-family: var(--body-font);
+    font-size: var(--bold-font-size);
+  }
+  
+  body {
+    background-color: var(--color-light);
+    color: var(--color-dark);
+  }
+  
+  img {
+    max-width: 100%;
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  a {
+    text-decoration: none;
+    color: var(--color-dark);
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-weight: var(--font-semi-bold);
+  }
+  
+  h1 {
+    font-size: var(--h1-font-size);
+  }
+  
+  h2 {
+    font-size: var(--h2-font-size);
+  }
+  
+  h3 {
+    font-size: var(--h3-font-size);
+  }
+  
+  input {
+    background-color: var(--color-white);
+    color: var(--color-dark);
+  }
+
+.flex {
+    display: flex;
+}
+.header {
+    top: 0;
+    z-index: 1;
+    background-color: rgb(26, 26, 26);
+    color: aliceblue;
+    
+}
+.header-box {
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 2rem;
+   
+}
+
+.header-padding {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.container-center {
+    max-width: 1440px;
+    margin: auto;
+    padding-top: 1rem;
+}
+
+.dog-box {
+    top: 0;
+    z-index: 1;
+
+    
+}
+.dog-content {
+    justify-content: start;
+    padding-left: 2rem;
+    text-align: center;
+    flex-direction: row;
+    z-index: 10;
+}
+.dog-undefined {
+    position: relative;
+    width: 100%;
+}
+
+.dog-container {
+    background-image: url("https://i.imgur.com/sLtEIkn.jpeg");
+    background-size: cover; /* Масштабирование изображения для заполнения фона */
+    background-position: 50% 50%; /* Положение изображения в центре фона */
+    background-repeat: no-repeat; /* Запрет повторения изображения */
+
+    height: 1000rem;
+}
