@@ -171,7 +171,6 @@
 }
 
 .container-center {
-    max-width: 1440px;
     margin: auto;
     padding-top: 1rem;
 }
@@ -182,23 +181,51 @@
 
     
 }
-.dog-content {
-    justify-content: start;
-    padding-left: 2rem;
-    text-align: center;
-    flex-direction: row;
-    z-index: 10;
+.dog-padding {
+  width: 100%;
+  height: 100%;
+  padding-left: 8rem;
+  padding-right: 2rem;
+  padding-top: 10rem;
+  padding-bottom: 4rem;
 }
-.dog-undefined {
-    position: relative;
-    width: 100%;
+.dog-content {
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: left;
+    z-index: 10;
+
+}
+
+.dog-content > h1 {
+  color: aliceblue;
+  font-size: 5rem;
+}
+.dog-content > h2 {
+
+  color: aliceblue;
+  
+}
+.default-button {
+  display: inline-block;
+  border-radius: 1rem;
+  background-color: black;
+  color: aliceblue;
+  padding: 10px 20px;
+  max-width: fit-content;
 }
 
 .dog-container {
-    background-image: url("https://i.imgur.com/sLtEIkn.jpeg");
+    background-image: url("/assets/images/fatdog.jpg");
     background-size: cover; /* Масштабирование изображения для заполнения фона */
     background-position: 50% 50%; /* Положение изображения в центре фона */
     background-repeat: no-repeat; /* Запрет повторения изображения */
-
-    height: 1000rem;
+    filter: brightness(0.5);
+    height: 30rem;
 }
+
+.services-box {
+  z-index: 20;
+
+}
+
