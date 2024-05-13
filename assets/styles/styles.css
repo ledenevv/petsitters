@@ -122,6 +122,8 @@
     color: var(--color-dark);
   }
   
+  
+
   h1,
   h2,
   h3,
@@ -149,12 +151,95 @@
 .flex {
     display: flex;
 }
-.header {
-    top: 0;
-    z-index: 1;
-    background-color: rgb(26, 26, 26);
-    color: aliceblue;
-    
+header{
+  background-color: rgb(233, 240, 232);
+  z-index: 100;
+}
+
+.container{ 
+  margin: 0 auto; 
+  max-width: 1440px;
+}
+
+.navbar{
+  min-height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+}
+
+.nav-menu{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+  z-index: 101;
+}
+
+.nav-branding{
+  font-size: 2rem;
+  font-weight: var(--font-semi-bold);
+}
+
+
+.nav-link{
+  transition: 0.7s ease;
+}
+
+.nav-link:hover{
+  color: blue;
+}
+
+.hamburger{
+  display: none;
+  cursor : pointer; 
+}
+
+.bar{
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: black;
+}
+
+@media(max-width:768px){
+  .hamburger{
+    display: block;
+  }
+
+  .hamburger.active .bar:nth-child(2){
+    opacity: 0;
+  }
+  .hamburger.active .bar:nth-child(1){
+    transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger.active .bar:nth-child(3){
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .nav-menu{
+    position: fixed;
+    left: -100%;
+    top: 70px;
+    gap: 0; 
+    flex-direction: column;
+    background-color: aliceblue;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+  }
+
+  .nav-item{
+    margin: 16px 0; 
+  }
+
+  .nav-menu.active{
+    left: 0; 
+  }
 }
 .header-box {
     justify-content: space-between;
@@ -177,34 +262,14 @@
 
 .dog-box {
     top: 0;
-    z-index: 1;
-
-    
 }
 .dog-padding {
   width: 100%;
   height: 100%;
-  padding-left: 8rem;
-  padding-right: 2rem;
+  padding-left: 24px;
+  padding-right: 24px;
   padding-top: 10rem;
   padding-bottom: 4rem;
-}
-.dog-content {
-    flex-direction: column;
-    justify-content: space-between;
-    text-align: left;
-    z-index: 10;
-
-}
-
-.dog-content > h1 {
-  color: aliceblue;
-  font-size: 5rem;
-}
-.dog-content > h2 {
-
-  color: aliceblue;
-  
 }
 .default-button {
   display: inline-block;
@@ -216,16 +281,198 @@
 }
 
 .dog-container {
+    position: relative;
     background-image: url("/assets/images/fatdog.jpg");
     background-size: cover; /* Масштабирование изображения для заполнения фона */
     background-position: 50% 50%; /* Положение изображения в центре фона */
     background-repeat: no-repeat; /* Запрет повторения изображения */
-    filter: brightness(0.5);
-    height: 30rem;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
-.services-box {
-  z-index: 20;
-
+.about-us-box {
+margin: 50px;
 }
 
+.about-us-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.person-first {
+  flex-basis: 200px;
+  max-width: calc(33.3333% - 16px);
+  pointer-events: auto;
+  margin: 2.5rem;
+}
+
+.persons-img-box {
+  position: relative;
+  padding-bottom: 100%;
+  margin-bottom: 16px;
+}
+.persons-img-radius {
+  position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));
+}
+
+.persons-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.persons-name {
+  position: relative;
+  font-size: 1.25rem;
+  height: 1.2em;
+  margin-bottom: 8px;
+}
+
+.persons-text-name {
+  position: absolute;
+  width: 100%;
+  height: 1.2em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
+  margin: 0px;
+  color: rgb(74, 74, 74);
+}
+
+.persons-city {
+  position: relative;
+  font-size: 1rem;
+  height: 1em;
+  margin-bottom: 8px;
+}
+
+.persons-text-city {
+  position: absolute;
+  width: 100%;
+  height: 1em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
+  margin: 0px;
+  color: rgb(108, 108, 108);
+}
+
+.person-second {
+  flex-basis: 200px;
+  max-width: calc(33.3333% - 16px);
+  pointer-events: auto;
+  order: 1;
+  margin: 2.5rem;
+}
+
+.person-third {
+  flex-basis: 200px;
+  max-width: calc(33.3333% - 16px);
+  pointer-events: auto;
+  order: 2;
+  margin: 2.5rem;
+}
+
+.person-forth {
+  flex-basis: 200px;
+  max-width: calc(33.3333% - 16px);
+  pointer-events: auto;
+  order: 3;
+  margin: 2.5rem;
+}
+
+.person-fifth {
+  flex-basis: 200px;
+  max-width: calc(33.3333% - 16px);
+  pointer-events: auto;
+  order: 4;
+  margin: 2.5rem;
+}
+
+.person-sixth {
+  flex-basis: 200px;
+  max-width: calc(33.3333% - 16px);
+  pointer-events: auto;
+  order: 5;
+  margin: 2.5rem;
+}
+
+.dog-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  filter: brightness(0.5);
+  height: 30rem;
+}
+.dog-content {
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: left;
+
+}
+.dog-content > h1 {
+  color: aliceblue;
+  font-size: 5rem;
+}
+.dog-content > h2 {
+
+  color: aliceblue;
+  
+}
+
+.about-section{
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 500px;
+  background-color: rgb(233, 240, 232);
+  margin-top: 50px;
+}
+
+.about-picture{
+  background-image: url("/assets/images/aboutme.jpg");
+  background-size: cover; 
+  background-position: 50% 50%; 
+  background-repeat: no-repeat; 
+  grid-row: 0;
+}
+
+.about-text-block{
+  flex-direction: column;
+  padding-left: 4rem;
+  padding-top: 4rem;
+ 
+}
+
+.about-text-block > h1{ 
+  margin-bottom: 1.5rem;
+  font-size: 2.5rem;
+}
+
+.about-text-block > p{ 
+  margin-bottom: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+.deffault-btn{ 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  height: 50px;
+  background-color: aliceblue;
+  color: black;
+  font-size: 1.2rem;
+  border-radius: 2rem;
+  transition: 0.3s;
+}
