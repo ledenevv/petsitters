@@ -437,6 +437,7 @@ margin: 50px;
   grid-template-rows: 500px;
   background-color: rgb(233, 240, 232);
   margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 .about-picture{
@@ -475,4 +476,140 @@ margin: 50px;
   font-size: 1.2rem;
   border-radius: 2rem;
   transition: 0.3s;
+}
+
+.reviews-section{
+  margin-top: 20px;
+  margin-bottom: 80px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+}
+
+.reviews-section > h1{
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+.slider{
+  margin-top: 3rem;
+  overflow: hidden;
+  width: 100%;
+}
+
+.slides{ 
+  align-items: left;
+  animation: switch-slides 10s infinite;
+  width: 400%;
+}
+
+.slide{ 
+  width: 25%;
+  align-items: center;
+  justify-content: center;
+}
+
+
+@keyframes switch-slides{ 
+  0% {
+    transform: translateX(0);
+  }
+  22%{
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-25%);
+  }
+  47%{
+    transform: translateX(-25%);
+  }
+  50% {
+    transform: translateX(-50%);
+  }
+  72%{
+  transform: translateX(-50%);
+  }
+  75% {
+    transform: translateX(-75%);
+  }
+  97%{
+    transform: translateX(-75%);
+  }
+  100% {
+    transform: translateX(0rem);
+  }
+
+}
+
+.review{
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+}
+
+.review > img{ 
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  margin-left: 8px;
+  object-fit: cover; 
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.review-text{
+  border-radius: 15px;
+  padding: 20px;
+  background-color: var(--secondary-color);
+  text-align: inherit;
+  margin-left: 20px;
+  justify-content: center;
+  flex-direction: column;
+  background-color: rgb(233, 240, 232);
+  border-radius: 20px;
+}
+
+.review-text > p, .name, .job, .rating{
+  max-width: 100%;
+  font-size: var(--normal-font-size);
+  margin: 5px;
+}
+
+@media(max-width:768px){
+  .reviews-section > h1{
+    font-size: 2rem;
+  }
+
+ .review{
+  flex-direction: column;
+ }
+
+  .review > img{ 
+    margin-bottom: 8px;
+    height: 175px;
+    width: 175px;
+  }
+  
+  
+}
+
+.name{
+  font-weight: bold;
+}
+
+
+.footer{ 
+  height: 200px; 
+  background-color: rgb(233, 240, 232);
+  justify-content: center;
+  gap: 20%;
+}
+
+.footer .pages, .contact-info{
+  gap: 10px;
+  margin-top: 3rem;
+  flex-direction: column;
 }
