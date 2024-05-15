@@ -80,7 +80,7 @@
     --dot-size: 15px;
 
       /* Light mode */
-      --light-switch-icon: url("../assets/images/sun.svg");
+      --light-switch-icon: url("/assets/images/sun.svg");
       --light-text-one: #095a5a;
       --light-text-second: #0d7a7a;
       --light-bg:#ffffff;
@@ -89,7 +89,7 @@
       --light-shadow:rgba(88, 67, 21, 0.678);
   
       /* Dark mode */
-      --dark-switch-icon: url("../assets/images/moon.svg");
+      --dark-switch-icon: url("/assets/images/moon.svg");
       --dark-text-one: #f0f8ff;
       --dark-text-second: #cececf;
       --dark-bg: #182c25;
@@ -354,7 +354,7 @@ header{
 
 .dog-container {
     position: relative;
-    background-image: url("../assets/images/fatdog.jpg");
+    background-image: url("/assets/images/fatdog.jpg");
     background-size: cover; /* Масштабирование изображения для заполнения фона */
     background-position: 50% 50%; /* Положение изображения в центре фона */
     background-repeat: no-repeat; /* Запрет повторения изображения */
@@ -582,7 +582,7 @@ margin: 50px;
 
 
 .about-picture{
-  background-image: url("../assets/images/aboutme.jpg");
+  background-image: url("/assets/images/aboutme.jpg");
   background-size: cover; 
   background-position: 50% 50%; 
   background-repeat: no-repeat; 
@@ -765,7 +765,7 @@ margin: 50px;
 
 .about-tape {
   position: relative;
-  background-image: url("../assets/images/aboutme.PNG");
+  background-image: url("/assets/images/aboutme.PNG");
   background-size: cover; /* Масштабирование изображения для заполнения фона */
   background-position: 85% 85%; /* Положение изображения в центре фона */
   background-repeat: no-repeat; /* Запрет повторения изображения */
@@ -867,7 +867,7 @@ margin: 50px;
 }
 
 .about-picture-1{
-  background-image: url("../assets/images/about1.jpeg");
+  background-image: url("/assets/images/about1.jpeg");
   background-size: cover; 
   background-position: 50% 50%; 
   background-repeat: no-repeat; 
@@ -878,7 +878,7 @@ margin: 50px;
 }
 
 .about-picture-2{
-  background-image: url("../assets/images/about2.jpeg");
+  background-image: url("/assets/images/about2.jpeg");
   background-size: cover; 
   background-position: 50% 50%; 
   background-repeat: no-repeat; 
@@ -889,7 +889,7 @@ margin: 50px;
 }
 
 .about-picture-3{
-  background-image: url("../assets/images/about3.jpg");
+  background-image: url("/assets/images/about3.jpg");
   background-size: cover; 
   background-position: 50% 50%; 
   background-repeat: no-repeat; 
